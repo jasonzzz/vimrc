@@ -65,7 +65,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/L9'
-Bundle 'Lokaltog/powerline'
+Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
+"Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'
 "Bundle 'Valloric/YouCompleteMe'
 "Bundle 'msanders/snipmate.vim'
@@ -84,18 +86,35 @@ Bundle 'mattn/gist-vim'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'Shougo/neosnippet.vim'
 Bundle 'Shougo/neosnippet-snippets'
-Bundle "tpope/vim-markdown"
-Bundle "pangloss/vim-javascript"
-Bundle "flazz/vim-colorschemes"
-"Bundle "vim-scripts/DrawIt"
-Bundle "kchmck/vim-coffee-script"
-Bundle "jcf/vim-latex"
+Bundle 'tpope/vim-markdown'
+Bundle 'pangloss/vim-javascript'
+Bundle 'flazz/vim-colorschemes'
+"Bundle 'vim-scripts/DrawIt'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'jcf/vim-latex'
+
+" vim-airline
+set laststatus=2
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='luna'
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+
+" tmuxline
+let g:tmuxline_powerline_separators = 0
+let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'nightly_fox'
 
 " powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2
-set t_Co=256
-let g:Powerline_symbols='fancy'
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"set laststatus=2
+"set t_Co=256
+"let g:Powerline_symbols='fancy'
 
 " nerdtree
 let NERDTreeShowHidden=1
