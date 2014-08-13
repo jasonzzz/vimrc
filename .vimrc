@@ -67,29 +67,11 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/L9'
 Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'msanders/snipmate.vim'
 Bundle "majutsushi/tagbar"
-Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'scrooloose/syntastic'
-"Bundle 'vim-scripts/Emmet.vim'
-"Bundle 'tpope/vim-rails'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'Shougo/neosnippet.vim'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle "tpope/vim-markdown"
-Bundle "pangloss/vim-javascript"
-Bundle "flazz/vim-colorschemes"
-"Bundle "vim-scripts/DrawIt"
-Bundle "kchmck/vim-coffee-script"
-Bundle "jcf/vim-latex"
 
 " powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -110,105 +92,9 @@ au syntax * RainbowParenthesesLoadSquare
 au syntax * RainbowParenthesesLoadBraces
 
 " vim-trailing-whitespace
-map <Leader>W :FixWhitespace<CR>
-
-" vim-indent-guides
-let g:indent_guides_start_level=1
-let g:indent_guides_guide_size=1
-let g:indent_guides_auto_colors=1
-set background=dark
-map <Leader>I :IndentGuidesToggle<CR>
-
-" vim-trailing-whitespace
 map <Leader>] :FixWhitespace<CR>
 
 " syntastic
 map <Leader>\ :SyntasticCheck<CR>
 let g:syntastic_auto_loc_list=0
 let g:syntastic_php_checkers=['php','phpcs','phpmd']
-
-" FuzzyFinder
-map <Leader>f :FufFile<CR>
-map <Leader>b :FufBuffer<CR>
-
-" neocomplete
-let g:neocomplete#enable_at_startup=1
-let g:neocomplete#enable_smart_case=1
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" neosnippet
-let g:neosnippet#enable_snipmate_compatibility = 1
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" pangloss/vim-javascript
-let javascript_enable_domhtmlcss=1
-let g:javascript_conceal=1
-
-" majutsushi/tagbar
-" https://github.com/majutsushi/tagbar/wiki
-nmap <Leader>T :TagbarToggle<CR>
-" Go
-let g:tagbar_type_go = {
-    \ 'ctagstype': 'go',
-    \ 'kinds' : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\}
-" markdown
-let g:tagbar_type_markdown = {
-    \ 'ctagstype':'markdown',
-    \ 'kinds':[
-        \ 'h:Heading_L1',
-        \ 'i:Heading_L2',
-        \ 'k:Heading_L3'
-    \ ]
-\ }
-" CoffeeScript
-if executable('coffeetags')
-    let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
-        \ 'kinds' : [
-            \ 'f:functions',
-            \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-            \ 'f' : 'object',
-            \ 'o' : 'object',
-        \ }
-    \ }
-endif
-
-" kchmck/vim-coffee-script
-" https://github.com/kchmck/vim-coffee-script#configure-syntax-highlighting
-let coffee_indent_keep_current = 1
-autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
