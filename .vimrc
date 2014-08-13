@@ -65,19 +65,10 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/L9'
-Bundle 'Lokaltog/powerline'
 Bundle 'scrooloose/nerdtree'
-Bundle "majutsushi/tagbar"
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'scrooloose/syntastic'
-
-" powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2
-set t_Co=256
-let g:Powerline_symbols='fancy'
 
 " nerdtree
 let NERDTreeShowHidden=1
@@ -93,8 +84,3 @@ au syntax * RainbowParenthesesLoadBraces
 
 " vim-trailing-whitespace
 map <Leader>] :FixWhitespace<CR>
-
-" syntastic
-map <Leader>\ :SyntasticCheck<CR>
-let g:syntastic_auto_loc_list=0
-let g:syntastic_php_checkers=['php','phpcs','phpmd']
