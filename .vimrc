@@ -61,9 +61,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 " vundle
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 Bundle 'vim-scripts/L9'
 Bundle 'bling/vim-airline'
 Bundle 'edkolev/tmuxline.vim'
