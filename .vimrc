@@ -1,5 +1,3 @@
-colorscheme darkzen
-
 syntax on
 filetype off
 filetype plugin indent on
@@ -69,6 +67,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'bronson/vim-trailing-whitespace'
+
+" vim-colorschemes
+set rtp+=~/.vim/bundle/vim-colorschemes
+colorscheme darkzen
 
 " nerdtree
 let NERDTreeShowHidden=1
