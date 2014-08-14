@@ -63,7 +63,7 @@ vnoremap > >gv
 " vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 Bundle 'vim-scripts/L9'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Townk/vim-autoclose'
