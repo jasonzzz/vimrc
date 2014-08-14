@@ -1,5 +1,3 @@
-colorscheme darkzen
-
 syntax on
 filetype off
 filetype plugin indent on
@@ -92,6 +90,10 @@ Bundle 'flazz/vim-colorschemes'
 "Bundle 'vim-scripts/DrawIt'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'jcf/vim-latex'
+
+" vim-colorschemes
+set rtp+=~/.vim/bundle/vim-colorschemes
+colorscheme darkzen
 
 " vim-airline
 set laststatus=2
