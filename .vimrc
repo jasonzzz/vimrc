@@ -67,6 +67,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'sjl/gundo.vim'
 
 " vim-colorschemes
 set rtp+=~/.vim/bundle/vim-colorschemes
@@ -86,3 +87,7 @@ au syntax * RainbowParenthesesLoadBraces
 
 " vim-trailing-whitespace
 map <Leader>] :FixWhitespace<CR>
+
+" gundo.vim
+nnoremap <F5> :GundoToggle<CR>
+let g:gundo_right = 1
