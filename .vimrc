@@ -69,6 +69,7 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'scrooloose/nerdtree'
 "Bundle 'Valloric/YouCompleteMe'
 "Bundle 'msanders/snipmate.vim'
+Bundle 'sjl/gundo.vim'
 Bundle "majutsushi/tagbar"
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Townk/vim-autoclose'
@@ -112,12 +113,6 @@ let g:tmuxline_powerline_separators = 0
 let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_theme = 'nightly_fox'
 
-" powerline
-"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-"set laststatus=2
-"set t_Co=256
-"let g:Powerline_symbols='fancy'
-
 " nerdtree
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
@@ -129,6 +124,10 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au syntax * RainbowParenthesesLoadSquare
 au syntax * RainbowParenthesesLoadBraces
+
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+let g:gundo_right = 1
 
 " vim-trailing-whitespace
 map <Leader>W :FixWhitespace<CR>
