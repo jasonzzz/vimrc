@@ -33,7 +33,7 @@ highlight ColorColumn ctermbg=543
 set cursorline
 set cursorcolumn
 
-autocmd FileType html,xhtml,css,scss,javascript,eruby,ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType html,xhtml,css,scss,javascript,eruby,ruby,puppet setlocal tabstop=2 shiftwidth=2 softtabstop=2
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.coffee set filetype=coffee
 
