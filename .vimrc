@@ -33,9 +33,12 @@ highlight ColorColumn ctermbg=543
 set cursorline
 set cursorcolumn
 
-autocmd FileType html,xhtml,css,scss,javascript,eruby,ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
-au BufNewFile,BufRead *.less set filetype=less
-au BufNewFile,BufRead *.coffee set filetype=coffee
+" if has("autocmd")
+autocmd FileType html,xhtml,css,scss,eruby,ruby,puppet,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufNewFile,BufRead *.less set filetype=less
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead *.rss,*.atom set filetype=xml
+autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 " window
 map <c-w><c-j> <c-w>+
@@ -90,8 +93,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
 "Bundle 'vim-scripts/DrawIt'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'jcf/vim-latex'
+"Bundle 'kchmck/vim-coffee-script'
+"Bundle 'jcf/vim-latex'
 
 " vim-colorschemes
 set rtp+=~/.vim/bundle/vim-colorschemes
@@ -212,24 +215,24 @@ let g:tagbar_type_markdown = {
     \ ]
 \ }
 " CoffeeScript
-if executable('coffeetags')
-    let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
-        \ 'kinds' : [
-            \ 'f:functions',
-            \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-            \ 'f' : 'object',
-            \ 'o' : 'object',
-        \ }
-    \ }
-endif
+"if executable('coffeetags')
+"    let g:tagbar_type_coffee = {
+"        \ 'ctagsbin' : 'coffeetags',
+"        \ 'ctagsargs' : '',
+"        \ 'kinds' : [
+"            \ 'f:functions',
+"            \ 'o:object',
+"        \ ],
+"        \ 'sro' : ".",
+"        \ 'kind2scope' : {
+"            \ 'f' : 'object',
+"            \ 'o' : 'object',
+"        \ }
+"    \ }
+"endif
 
 " kchmck/vim-coffee-script
 " https://github.com/kchmck/vim-coffee-script#configure-syntax-highlighting
-let coffee_indent_keep_current = 1
-autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+"let coffee_indent_keep_current = 1
+"autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+"autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
