@@ -95,6 +95,7 @@ Bundle 'flazz/vim-colorschemes'
 "Bundle 'vim-scripts/DrawIt'
 "Bundle 'kchmck/vim-coffee-script'
 "Bundle 'jcf/vim-latex'
+Bundle 'ekalinin/Dockerfile.vim'
 
 " vim-colorschemes
 set rtp+=~/.vim/bundle/vim-colorschemes
