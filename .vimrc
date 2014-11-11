@@ -69,6 +69,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'sjl/gundo.vim'
+Bundle 'ekalinin/Dockerfile.vim'
 
 " vim-colorschemes
 set rtp+=~/.vim/bundle/vim-colorschemes
