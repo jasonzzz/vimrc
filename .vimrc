@@ -36,7 +36,6 @@ set cursorcolumn
 " if has("autocmd")
 autocmd FileType html,xhtml,css,scss,eruby,ruby,puppet,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.less set filetype=less
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.rss,*.atom set filetype=xml
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
@@ -93,9 +92,9 @@ Bundle 'tpope/vim-markdown'
 Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
 "Bundle 'vim-scripts/DrawIt'
-"Bundle 'kchmck/vim-coffee-script'
 "Bundle 'jcf/vim-latex'
-Bundle 'ekalinin/Dockerfile.vim'
+Bundle "ekalinin/Dockerfile.vim"
+Bundle "itchyny/screensaver.vim"
 
 " vim-colorschemes
 set rtp+=~/.vim/bundle/vim-colorschemes
@@ -177,34 +176,48 @@ let g:javascript_conceal=1
 
 " majutsushi/tagbar
 " https://github.com/majutsushi/tagbar/wiki
+let g:tagbar_compact = 1
+let g:tagbar_indent = 1
+let g:tagbar_iconchars = ['+', '-']
+"let g:tagbar_autoclose = 1
 nmap <Leader>T :TagbarToggle<CR>
-" Go
-let g:tagbar_type_go = {
-    \ 'ctagstype': 'go',
-    \ 'kinds' : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
+" c
+let g:tagbar_type_c = {
+    \ 'kinds'     : [
+        \ 'c: classes',
+        \ 'd:macros:1',
+        \ 'e:enumerators:1',
+        \ 'f:functions',
+        \ 'l:local:1',
+        \ 'm:members:1',
+        \ 'g:enums:1',
+        \ 'v:variables:1',
+        \ 't:typedefs:1',
+        \ 's:structs:1',
+        \ 'n:namespaces:1',
+        \ 'u:unions:1',
+        \ 'p:prototypes:1',
+        \ 'x:external:1'
+    \ ]
+\}
+" cpp
+let g:tagbar_type_cpp = {
+    \ 'kinds'     : [
+        \ 'c: classes',
+        \ 'd:macros:1',
+        \ 'e:enumerators:1',
+        \ 'f:functions',
+        \ 'l:local:1',
+        \ 'm:members:1',
+        \ 'g:enums:1',
+        \ 'v:variables:1',
+        \ 't:typedefs:1',
+        \ 's:structs:1',
+        \ 'n:namespaces:1',
+        \ 'u:unions:1',
+        \ 'p:prototypes:1',
+        \ 'x:external:1'
+    \ ]
 \}
 " markdown
 let g:tagbar_type_markdown = {
@@ -215,25 +228,3 @@ let g:tagbar_type_markdown = {
         \ 'k:Heading_L3'
     \ ]
 \ }
-" CoffeeScript
-"if executable('coffeetags')
-"    let g:tagbar_type_coffee = {
-"        \ 'ctagsbin' : 'coffeetags',
-"        \ 'ctagsargs' : '',
-"        \ 'kinds' : [
-"            \ 'f:functions',
-"            \ 'o:object',
-"        \ ],
-"        \ 'sro' : ".",
-"        \ 'kind2scope' : {
-"            \ 'f' : 'object',
-"            \ 'o' : 'object',
-"        \ }
-"    \ }
-"endif
-
-" kchmck/vim-coffee-script
-" https://github.com/kchmck/vim-coffee-script#configure-syntax-highlighting
-"let coffee_indent_keep_current = 1
-"autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-"autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
