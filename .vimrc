@@ -228,3 +228,18 @@ let g:tagbar_type_markdown = {
         \ 'k:Heading_L3'
     \ ]
 \ }
+" go
+let g:tagbar_type_go = {
+    \ 'ctagstype': 'go',
+    \ 'kinds' : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constant:1',
+        \ 'f:function',
+        \ 'v:variable:1',
+        \ 't:type:1',
+        \ 'm:method:1'
+    \ ],
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
