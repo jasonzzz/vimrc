@@ -95,6 +95,8 @@ Bundle 'flazz/vim-colorschemes'
 "Bundle 'jcf/vim-latex'
 Bundle "ekalinin/Dockerfile.vim"
 Bundle "itchyny/screensaver.vim"
+Bundle "vim-pandoc/vim-pandoc"
+Bundle "vim-pandoc/vim-pandoc-syntax"
 
 " vim-colorschemes
 set rtp+=~/.vim/bundle/vim-colorschemes
