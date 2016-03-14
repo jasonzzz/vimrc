@@ -1,5 +1,5 @@
 syntax on
-filetype off
+"filetype off
 filetype plugin indent on
 
 set langmenu=en_US.utf-8
@@ -61,42 +61,40 @@ vnoremap <Leader>s :sort<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" ctags
+map <Leader>ct :!ctags -R .<CR><CR>
+" cscope
+map <Leader>cs :!cscope -Rbkq <CR><CR>
+map <Leader>csa :cscope add cscope.out<CR>
+
 " vundle
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
-Bundle 'gmarik/Vundle.vim'
-Bundle 'vim-scripts/L9'
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
-"Bundle 'Lokaltog/powerline'
-Bundle 'scrooloose/nerdtree'
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'msanders/snipmate.vim'
-Bundle 'sjl/gundo.vim'
-Bundle "majutsushi/tagbar"
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'Townk/vim-autoclose'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'scrooloose/syntastic'
-"Bundle 'vim-scripts/Emmet.vim'
-"Bundle 'tpope/vim-rails'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'Shougo/neosnippet.vim'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'tpope/vim-markdown'
-Bundle 'pangloss/vim-javascript'
-Bundle 'flazz/vim-colorschemes'
-"Bundle 'vim-scripts/DrawIt'
-"Bundle 'jcf/vim-latex'
-Bundle "ekalinin/Dockerfile.vim"
-Bundle "itchyny/screensaver.vim"
-Bundle "vim-pandoc/vim-pandoc"
-Bundle "vim-pandoc/vim-pandoc-syntax"
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-scripts/L9'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sjl/gundo.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Townk/vim-autoclose'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'scrooloose/syntastic'
+"Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'mattn/webapi-vim'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'tpope/vim-markdown'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'ekalinin/Dockerfile.vim'
+"Plugin 'itchyny/screensaver.vim'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 " vim-colorschemes
 set rtp+=~/.vim/bundle/vim-colorschemes
