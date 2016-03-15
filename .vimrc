@@ -61,6 +61,10 @@ vnoremap <Leader>s :sort<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" scroll
+nmap <C-j> <C-e>
+nmap <C-k> <C-y>
+
 " ctags
 map <Leader>ct :!ctags -R .<CR><CR>
 " cscope
